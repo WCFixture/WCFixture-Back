@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import store from './Redux/store/index.js';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 
 // 1. import `extendTheme` function
@@ -26,9 +25,7 @@ root.render(
   <ChakraProvider theme={theme}>
     <ColorModeScript initialColorMode={theme.config.initialColorMode} />
     <Provider store={store}>
-      <BrowserRouter>
           <App />
-      </BrowserRouter>
     </Provider>
   </ChakraProvider>
 );
