@@ -5,6 +5,7 @@ import App from './App';
 import store from './Redux/store/index.js';
 import { Provider } from 'react-redux';
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
+import { Auth0Provider } from "@auth0/auth0-react";
 
 // 1. import `extendTheme` function
 import { extendTheme } from '@chakra-ui/react'
@@ -25,7 +26,9 @@ root.render(
   <ChakraProvider theme={theme}>
     <ColorModeScript initialColorMode={theme.config.initialColorMode} />
     <Provider store={store}>
-          <App />
+      <Auth0Provider domain='dev-gc27ick5rtn5sejy.us.auth0.com' clientId='oZJ2xUiU5CKmEno9apmtGt6QkOyJmawN' redirectUri={window.location.origin}>
+        <App />
+        </Auth0Provider>
     </Provider>
   </ChakraProvider>
 );
