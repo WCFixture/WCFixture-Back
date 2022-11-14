@@ -8,15 +8,15 @@ const matchsRoutes = Router();
 
 // Routes:
 
+
 matchsRoutes.post('/new_match', async (req, res) => {
     try {
-      const { id, status, countries, date, instance } = req.body;
-  
-      const newMatch = await Match.create({ id, status, countries, date, instance }, function (err, small) {});
-      res.status(201).json(newMatch);
+        const { id, status, countries, date, instance } = req.body;
+        let json = await Match.create({ id, status, countries, date, instance });
+        res.status(201).json(json);
     } catch (error) {
-      return res.status(204).send({ Error: error.message });
+        return res.status(400).json({ "Error": error.message });
     }
-  });
+});
 
 module.exports = matchsRoutes;

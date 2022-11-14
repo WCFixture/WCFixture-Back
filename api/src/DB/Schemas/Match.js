@@ -15,13 +15,17 @@ const dataSchema = new mongoose.Schema({
     required: true
   },
   date: {
-    type: String,
-    required: false
+    type: Date,
+    required: true
   }, 
   instance: {
     type: String,
     required: true
-  } 
+  },
+  result: {
+    type: Object,
+    required: false
+  }
 });
 
 module.exports = mongoose.model('Match', dataSchema);

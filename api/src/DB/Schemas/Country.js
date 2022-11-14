@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const dataSchema = new mongoose.Schema({
   id: {
     type: String,
-    required: true
+    required: true,
+    unique: true
   },
   status: {
     type: String,
