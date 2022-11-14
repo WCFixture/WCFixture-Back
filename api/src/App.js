@@ -2,7 +2,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
-//const routes = require('./Routes/index.js');
+const routes = require('./Routes/index.js');
 
 require('./DB/DB.js');
 
@@ -31,9 +31,7 @@ server.use((req, res, next) => {
   next();
 });
 
-server.get('/', (req, res) => {
-    res.json({"status":"entro"})
-});
+server.use('/', routes);
 
 server.use((err, req, res, next) => {
   const status = err.status || 500;
