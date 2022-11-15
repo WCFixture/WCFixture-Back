@@ -56,10 +56,10 @@ export default function Sidebar() {
                             changeNavSize("small")
                     }}
                 />
-                <Link to="/"><NavItem navSize={navSize} icon={FiHome} title="Home" description=""/></Link>
-                <Link to="/pickem"><NavItem navSize={navSize} icon={BiFootball} title="Prode"/></Link>
-                <Link to="/fixture"><NavItem navSize={navSize} icon={FiCalendar} title="Fixture"/></Link>
-                <Link to="/about"><NavItem navSize={navSize} icon={AiOutlineQuestionCircle} title="About"/></Link>
+                <NavItem navSize={navSize} icon={FiHome} title="Home" description="" link="/"/>
+                <NavItem navSize={navSize} icon={BiFootball} title="Prode" link="/pickem"/>
+                <NavItem navSize={navSize} icon={FiCalendar} title="Fixture" link="/fixture"/>
+                <NavItem navSize={navSize} icon={AiOutlineQuestionCircle} title="About" link="/about"/>
             </Flex>
 
             <Flex
