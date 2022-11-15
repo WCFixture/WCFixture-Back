@@ -1,11 +1,11 @@
 import React from "react";
 import Sidebar from "../SideBar/Sidebar";
   
-const Fixture = () => {
+const About = () => {
     return(
 
         <Sidebar/>
         
     )}
 
-export default Fixture;
+export default About;
