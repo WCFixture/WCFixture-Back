@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import {
     Flex,
     Text,
@@ -30,6 +29,7 @@ export default function Sidebar() {
             pos="sticky"
             left="5"
             h="95vh"
+            bgGradient='radial(rgba(22,8,45,0.8410714627647934) 0%, rgba(25,10,83,0.8410714627647934) 100%)'
             marginTop="2.5vh"
             boxShadow="0 4px 12px 0 rgba(0, 0, 0, 0.05)"
             borderRadius={navSize === "small" ? "15px" : "30px"}
@@ -47,7 +47,8 @@ export default function Sidebar() {
                 <IconButton
                     background="none"
                     mt={5}
-                    _hover={{ background: 'lightgray' , }}
+                    color="#b2b7d7"
+                    _hover={{ background: '#6a73ab' , }}
                     icon={<FiMenu />}                    
                     onClick ={() => {
                         if (navSize === "small")
@@ -70,10 +71,10 @@ export default function Sidebar() {
                 mb={4}
             >
                 <Divider display={navSize === "small" ? "none" : "flex"} />
-                <Flex mt={4} align="center"  transition="all .25s ease" _hover={{ filter: "brightness(130%)", }}>
+                <Flex mt={4} align="center" borderRadius="md" transition="all .25s ease" _hover={{ filter: "brightness(130%)"}}>
                     <Avatar size="sm" src="" />
                     <Flex flexDir="column" ml={4} display={navSize === "small" ? "none" : "flex"}>
-                        <Heading as="h3" size="sm">Sylwia Weller</Heading>
+                        <Heading as="h3" size="sm" color="#6a73ab">Sylwia Weller</Heading>
                         <Text color="gray">Admin</Text>
                     </Flex>
                 </Flex>
