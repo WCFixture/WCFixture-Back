@@ -9,8 +9,11 @@ import {
     Image,
     createIcon,}
 from '@chakra-ui/react';
+
+import {useNavigate} from 'react-router-dom'
   
   export default function HomeContent() {
+    const navigate = useNavigate()
     return (
       <Container maxW={'7xl'}>
         <Stack
@@ -58,7 +61,8 @@ from '@chakra-ui/react';
                 px={6}
                 colorScheme={'red'}
                 bg={'#3E1B7A'}
-                _hover={{ bg: '#551FB2' }}>
+                _hover={{ bg: '#551FB2' }}
+                onClick={()=>{navigate("/fixture")}}>
                 Ver el fixture
               </Button>
                <Button
@@ -69,7 +73,8 @@ from '@chakra-ui/react';
                 fontWeight={'normal'}
                 px={6}
                 _hover={{ bg: '#3E1B7A' }}
-                leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
+                leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}
+                onClick={()=>{navigate("/pickem")}}>
                 Completá el prode
               </Button>
             </Stack>

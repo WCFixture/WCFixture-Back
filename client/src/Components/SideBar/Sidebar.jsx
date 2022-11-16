@@ -6,6 +6,7 @@ import {
     Divider,
     Avatar,
     Heading,
+    Link,
 } from '@chakra-ui/react'
 import {
     FiMenu,
