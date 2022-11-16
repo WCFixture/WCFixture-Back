@@ -7,14 +7,14 @@ const dataSchema = new mongoose.Schema({
   },
   prode: {
     type: Object,
-    required: true
+    required: false
   },
   prodeComplete: {
     type: Boolean,
     required: true
   },
   points: {
-    type: Integer,
+    type: Number,
     required: false
   }
 });
