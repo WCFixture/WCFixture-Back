@@ -8,7 +8,6 @@ import { HStack } from '@chakra-ui/react'
          <>
         <HStack spacing='24px'>
             <Sidebar/>
-            <h1>ASD</h1>
         </HStack>
         </>  
     )}
