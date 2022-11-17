@@ -19,4 +19,14 @@ matchsRoutes.post('/new_match', async (req, res) => {
     }
 });
 
+matchsRoutes.get('/get_group/:grupo', async (req, res) => {
+    try {
+        const { grupo } = req.params;
+        let json = await Match.find({group: grupo});
+        res.status(200).json(json);
+    } catch (error) {
+        return res.status(400).json({ "Error": error.message });
+    }
+});
+
 module.exports = matchsRoutes;

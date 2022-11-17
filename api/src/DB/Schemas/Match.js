@@ -25,6 +25,10 @@ const dataSchema = new mongoose.Schema({
   result: {
     type: Object,
     required: false
+  },
+  group: {
+    type: String,
+    required: false
   }
 });
 
