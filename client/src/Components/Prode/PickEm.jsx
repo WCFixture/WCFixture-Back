@@ -13,6 +13,8 @@ import {
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import GroupMatchs from './GroupMatchs';
+import AllGroups from './AllGroups';
+import PrincipalMatch from './PrincipalMatch';
 
 export default function PickEm() {
   const navigate = useNavigate();
@@ -26,9 +28,11 @@ export default function PickEm() {
         Además podes completar el prode, en el cual jugas a acertar los
         resultados y participas por premios en dinero real.
       </Text>
-      <Flex w="100%">
+      <PrincipalMatch/>
+      <Center w="90%">
+        <AllGroups/>
         <GroupMatchs group={"C"}/>
-      </Flex>
+      </Center>
     </Center>
   );
 }
