@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import GroupMatchs from './GroupMatchs';
 
 export default function PickEm() {
   const navigate = useNavigate();
@@ -25,6 +26,9 @@ export default function PickEm() {
         Además podes completar el prode, en el cual jugas a acertar los
         resultados y participas por premios en dinero real.
       </Text>
+      <Flex w="100%">
+        <GroupMatchs group={"C"}/>
+      </Flex>
     </Center>
   );
 }

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_COUNTRIES } from '../consts';
+import { GET_COUNTRIES, GET_MATCHS_FROM_GROUP } from '../consts';
 
 
 export function getCountries() {
@@ -7,6 +7,16 @@ export function getCountries() {
         let json = await axios.get("/country/get_all")
         return dispatch({
             type: GET_COUNTRIES,
+            payload: json.data
+        })
+    }
+}
+
+export function getMatchsFromGroup(group) {
+    return async function (dispatch) {
+        let json = await axios.get("/match/get_group/" + group)
+        return dispatch({
+            type: GET_MATCHS_FROM_GROUP,
             payload: json.data
         })
     }
