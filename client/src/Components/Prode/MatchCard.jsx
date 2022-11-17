@@ -10,7 +10,7 @@ const MatchCard = ({ countries, date, instance, status }) => {
       <Flex>
         
       </Flex> 
-    )}
+)}
 
 
 export default MatchCard;
