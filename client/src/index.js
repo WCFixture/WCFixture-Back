@@ -5,6 +5,7 @@ import store from './Redux/store/index.js';
 import { Provider } from 'react-redux';
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import { Auth0Provider } from "@auth0/auth0-react";
+import axios from 'axios';
 
 // 1. import `extendTheme` function
 import { extendTheme } from '@chakra-ui/react'
@@ -17,6 +18,8 @@ const config = {
 
 // 3. extend the theme
 const theme = extendTheme({ config })
+
+axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3001";
 
 export default theme
 

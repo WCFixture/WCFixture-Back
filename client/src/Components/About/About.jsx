@@ -3,9 +3,7 @@ import Sidebar from "../SideBar/Sidebar";
   
 const About = () => {
     return(
-
-        <Sidebar/>
-        
+        <></>
     )}
 
 export default About;

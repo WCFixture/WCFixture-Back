@@ -18,6 +18,10 @@ const dataSchema = new mongoose.Schema({
   group: {
     type: String,
     required: true
+  },
+  flag: {
+    type: String,
+    required: true
   }
 });
 

@@ -10,6 +10,7 @@ const Match = require('../DB/Schemas/Match.js');
 
 const matchsRoutes = require('./matchsRoutes');
 const countriesRoutes = require('./countriesRoutes');
+const userRoutes = require('./userRoutes');
 
 
 
@@ -20,6 +21,7 @@ const countriesRoutes = require('./countriesRoutes');
 
 router.use('/match', matchsRoutes)
 router.use('/country', countriesRoutes)
+router.use('/user', userRoutes)
 
 
 
