@@ -1,4 +1,4 @@
-import { Flex, VStack, HStack, Image, Text, Button, Icon } from '@chakra-ui/react';
+import { Flex, VStack, HStack, Image, Text, Button, IconButton, Icon } from '@chakra-ui/react';
 import { TriangleDownIcon, TriangleUpIcon } from '@chakra-ui/icons'
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -106,14 +106,14 @@ const PrincipalMatch = ({ match }) => {
             {countryOne.name}
           </Text>
           <Flex direction={'column'} ml="10px">
-            <Button mb="10px" onClick={upButtonLocal} backgroundColor="transparent">
+            <Button mb={2}  onClick={upButtonLocal}  backgroundColor="transparent">
               <Icon
                 color={"white"}
-                boxSize={"30px"}
+                boxSize="30px"
                 as={TriangleUpIcon}
               ></Icon>
             </Button>
-            <Button onClick={downButtonLocal}  backgroundColor="transparent" >
+            <Button onClick={downButtonLocal}  backgroundColor="transparent">
               <Icon
                 color={"white"}
                 boxSize="30px"
@@ -143,15 +143,15 @@ const PrincipalMatch = ({ match }) => {
           </Flex>
 
           <Flex direction={'column'} mr="10px">
-          <Button mb="10px" onClick={upButtonAway} backgroundColor="transparent">
+          <Button mb={2} onClick={upButtonAway}  backgroundColor="transparent">
               <Icon
                 color={"white"}
-                boxSize={"30px"}
+                boxSize="30px"
                 as={TriangleUpIcon}
               ></Icon>
             </Button>
-            <Button onClick={downButtonAway} backgroundColor="transparent" _hover={{filter: "box-shadow(30px 10px 4px #4444dd)"}}>
-            <Icon
+            <Button onClick={downButtonAway}  backgroundColor="transparent">
+              <Icon
                 color={"white"}
                 boxSize="30px"
                 as={TriangleDownIcon}
