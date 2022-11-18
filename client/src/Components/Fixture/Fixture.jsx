@@ -1,9 +1,22 @@
 import React from "react";
-import Sidebar from "../SideBar/Sidebar";
-  
+import Fixturecontent from "./FixtureContent"
+import {
+    Container,
+    Stack,
+    Flex,
+    Box,
+    Heading,
+    Text,
+    Button,
+    Image,
+    createIcon,
+    Center,
+  } from '@chakra-ui/react';
 const Fixture = () => {
     return(
-        <></>
+        <>
+          <Fixturecontent></Fixturecontent>
+        </>
     )}
 
 export default Fixture;

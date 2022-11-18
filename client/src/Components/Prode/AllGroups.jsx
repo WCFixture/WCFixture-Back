@@ -6,11 +6,12 @@ import {
   Text,
   Button,
   Box,
+  background,
 } from '@chakra-ui/react';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
-
+import {groupComplete} from "./AllGroups"
 const AllGroups = ({ groupFocus, setGroup }) => {
   const allCountries = useSelector((state) => state.allCountries);
   const userProde = useSelector((state) => state.userProde);

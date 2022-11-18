@@ -22,8 +22,8 @@ const GroupMatchs = ({ group, setMatch }) => {
     return m.id;
   });
   let groupComplete =
-    userProde.hasOwnProperty(matchsIds[0]) &&
-    userProde.hasOwnProperty(matchsIds[1]) &&
+  userProde.hasOwnProperty(matchsIds[0]) &&
+  userProde.hasOwnProperty(matchsIds[1]) &&
     userProde.hasOwnProperty(matchsIds[2]) &&
     userProde.hasOwnProperty(matchsIds[3]) &&
     userProde.hasOwnProperty(matchsIds[4]) &&
@@ -92,5 +92,6 @@ const GroupMatchs = ({ group, setMatch }) => {
     </Flex>
   );
 };
+
 
 export default GroupMatchs;

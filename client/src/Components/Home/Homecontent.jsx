@@ -11,7 +11,9 @@ import {
 from '@chakra-ui/react';
 
 import {useNavigate} from 'react-router-dom'
-  
+import CarouselHome  from "./CarouselHome"
+
+
   export default function HomeContent() {
     const navigate = useNavigate()
     return (

@@ -136,7 +136,7 @@ const PrincipalMatch = ({ match }) => {
                   m="0"
                   h="34px"
                   w="100px"
-                  bgColor="green.700"
+                  colorScheme='green'
                   onClick={saveScore}
                 >
                   Save
