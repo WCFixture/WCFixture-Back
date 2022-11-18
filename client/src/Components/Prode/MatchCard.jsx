@@ -1,27 +1,39 @@
 import { Flex, Image, Text, Center, Box } from '@chakra-ui/react';
 import React from 'react';
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-const MatchCard = ({ countries }) => {
+const MatchCard = ({ match }) => {
   const allCountries = useSelector((state) => state.allCountries);
-  const navigate = useNavigate()
+  const userProde = useSelector((state) => state.userProde);
+  const navigate = useNavigate();
   const countryOne = allCountries.find((c) => {
-    return c.id === countries[0];
+    return c.id === match.countries[0];
   });
   const countryTwo = allCountries.find((c) => {
-    return c.id === countries[1];
+    return c.id === match.countries[1];
   });
+
+  /* useEffect(()=>{
+  }, [userProde]) */
   return (
     <>
       {countryTwo ? (
-        <Center h="30px" w="46%" padding={7} ml={"2%"} mr={"2%"} my="10px" justifyContent={'space-evenly'} onClick={()=>navigate('/home')} _hover={{backgroundColor: "rgba(25,10,83,1)", cursor: "pointer", boxShadow: "1px 1px 5px 1px rgba(0,0,0,0.35)"}} borderRadius="15px">
-          <Image src={countryOne.flag} h="30px" w="50px" borderRadius={2} />
+        <>
+          <Image src={countryOne.flag} h="35px" w="57px" borderRadius={2} />
           <Text>{countryOne.name}</Text>
-          <Text>&nbsp;-&nbsp;</Text>
+          {userProde.hasOwnProperty(match.id) ? (
+            <Text fontWeight={500} color={"white"}>
+              {userProde[match.id].local}&nbsp;-&nbsp;{userProde[match.id].away}
+            </Text>
+          ) : (
+            <Text>&nbsp;-&nbsp;</Text>
+          )}
+
           <Text>{countryTwo.name}</Text>
-          <Image src={countryTwo.flag} h="30px" w="50px" borderRadius={2} />
-        </Center>
+          <Image src={countryTwo.flag} h="35px" w="57px" borderRadius={2} />
+        </>
       ) : (
         <></>
       )}

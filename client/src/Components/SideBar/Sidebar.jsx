@@ -18,7 +18,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import LoginButton from '../Auth/Login';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { chequearEmail, getCountries } from '../../Redux/actions';
+import { chequearEmail, getCountries, getMatchsFromGroups } from '../../Redux/actions';
 import LogoutButton from '../Auth/Logout';
 
 export default function Sidebar() {
@@ -28,10 +28,14 @@ export default function Sidebar() {
 
   useEffect(() => {
     dispatch(getCountries())
-    if (isAuthenticated) {
+    dispatch(getMatchsFromGroups())
+  }, []);
+
+  useEffect(() => {
+    if(isAuthenticated){ 
       dispatch(chequearEmail(user.email));
     }
-  }, []);
+  }, [user]);
 
   return (
     <Flex
