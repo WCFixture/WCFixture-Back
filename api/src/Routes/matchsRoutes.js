@@ -29,4 +29,13 @@ matchsRoutes.get('/get_group/:grupo', async (req, res) => {
     }
 });
 
+matchsRoutes.get('/get_all_from_groups', async (req, res) => {
+    try {
+        let json = await Match.find({ instance: "groups" });
+        res.status(200).json(json);
+    } catch (error) {
+        return res.status(400).json({ "Error": error.message });
+    }
+});
+
 module.exports = matchsRoutes;

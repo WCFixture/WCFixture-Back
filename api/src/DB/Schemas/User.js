@@ -6,16 +6,12 @@ const dataSchema = new mongoose.Schema({
     required: true
   },
   prode: {
-    type: Object,
-    required: false
+    type: mongoose.SchemaTypes.Mixed,
+    required: true
   },
   prodeComplete: {
     type: Boolean,
     required: true
-  },
-  points: {
-    type: Number,
-    required: false
   }
 });
 

@@ -15,24 +15,65 @@ import { useNavigate } from 'react-router-dom';
 import GroupMatchs from './GroupMatchs';
 import AllGroups from './AllGroups';
 import PrincipalMatch from './PrincipalMatch';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+import {
+  getCountries,
+  getMatchsFromGroup,
+  getProde,
+} from '../../Redux/actions';
+import { useAuth0 } from '@auth0/auth0-react';
 
 export default function PickEm() {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const allCountries = useSelector((state) => state.allCountries);
+  const allGroupsMatchs = useSelector((state) => state.allGroupsMatchs);
+  const matchsFromGroup = useSelector((state) => state.matchsFromGroup);
+  const userProde = useSelector((state) => state.userProde);
+  const [groupFocus, setGroupFocus] = useState('A');
+  const [matchFocus, setMatchFocus] = useState('1');
+  const { user, isAuthenticated, isLoading } = useAuth0();
+
+  useEffect(() => {
+    dispatch(getMatchsFromGroup(groupFocus));
+    if (!allCountries.length) {
+      dispatch(getCountries());
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      dispatch(getProde(user.email));
+    }
+  }, [user]);
+
   return (
-    <Center minH="100vh" w="100%" flexDirection="column" justifyContent="flex-start">
-      <Heading color="white" mt="10vh">Bienvenido a nuestro prode!</Heading>
-      <br />
-      <Text color={'gray.500'} w="50%">
-        Con el fixture vas a tener acceso a toda la info de los partidos, en un
-        solo lugar vas a tener acceso a las fechas, horarios y resultados.
-        Además podes completar el prode, en el cual jugas a acertar los
-        resultados y participas por premios en dinero real.
-      </Text>
-      <PrincipalMatch/>
-      <Center w="90%">
-        <AllGroups/>
-        <GroupMatchs group={"C"}/>
-      </Center>
-    </Center>
+    <>
+      {!isLoading &&
+      (userProde || !isAuthenticated) &&
+      allCountries.length &&
+      allGroupsMatchs.length &&
+      matchsFromGroup.length ? (
+        <Center
+          minH="100vh"
+          w="100%"
+          flexDirection="column"
+          justifyContent="flex-start"
+        >
+          <Heading color="white" my="5%" h={'20%'}>
+            Bienvenido a nuestro prode!
+          </Heading>
+
+          <PrincipalMatch match={matchFocus} />
+          <Center w="98%" mt={"1%"} justifyContent="space-between">
+            <AllGroups groupFocus={groupFocus} setGroup={setGroupFocus} />
+            <GroupMatchs group={groupFocus} setMatch={setMatchFocus} />
+          </Center>
+        </Center>
+      ) : (
+        <></>
+      )}
+    </>
   );
 }
