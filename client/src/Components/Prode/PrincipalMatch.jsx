@@ -28,6 +28,8 @@ const PrincipalMatch = ({ match }) => {
     away: 0,
   });
 
+  
+
   useEffect(() => {
     if (userProde.hasOwnProperty(match)) {
       console.log('entre')
@@ -96,7 +98,7 @@ const PrincipalMatch = ({ match }) => {
       {matchFocus ? (
         <>
           <Image
-            m="20px"
+            m="30px"
             borderRadius={'5px'}
             w={'240px'}
             h="150px"
@@ -130,15 +132,15 @@ const PrincipalMatch = ({ match }) => {
               {result.local} - {result.away}
             </Text>
             {isAuthenticated ? (
-              <Button
-                m="0"
-                h="34px"
-                w="100px"
-                bgColor="green.700"
-                onClick={saveScore}
-              >
-                Save
-              </Button>
+                <Button
+                  m="0"
+                  h="34px"
+                  w="100px"
+                  bgColor="green.700"
+                  onClick={saveScore}
+                >
+                  Save
+                </Button>
             ) : null}
           </Flex>
 
@@ -162,7 +164,7 @@ const PrincipalMatch = ({ match }) => {
             {countryTwo.name}
           </Text>
           <Image
-            m="20px"
+            m="30px"
             borderRadius={'5px'}
             w={'240px'}
             h="150px"

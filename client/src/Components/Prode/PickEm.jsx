@@ -26,7 +26,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 
 export default function PickEm() {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
   const allCountries = useSelector((state) => state.allCountries);
   const allGroupsMatchs = useSelector((state) => state.allGroupsMatchs);
   const matchsFromGroup = useSelector((state) => state.matchsFromGroup);

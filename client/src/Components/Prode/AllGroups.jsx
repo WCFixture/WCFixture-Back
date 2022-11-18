@@ -23,18 +23,20 @@ const AllGroups = ({ groupFocus, setGroup }) => {
       bgGradient="radial(rgba(22,8,45,0.8410714627647934) 0%, rgba(25,10,83,0.8410714627647934) 100%)"
       direction={'column'}
       justifyContent={'space-evenly'}
+      justify
       overflow="hidden"
     >
       <Flex
-        my={'2px'}
+        h="14%"
         py={1}
         justifyContent={'space-evenly'}
         direction={'row'}
         display={groupFocus === 'A' ? 'none' : 'flex'}
         _hover={{
-          backgroundColor: 'rgba(25,10,83,1)',
+          backgroundColor: '#222D80',
           cursor: 'pointer',
-          boxShadow: '1px 1px 5px 1px rgba(0,0,0,0.35)',
+          transitionDuration: '0.5s',
+          transitionTimingFunction: "ease-in-out"
         }}
         onClick={() => {
           setGroup('A');
@@ -46,7 +48,7 @@ const AllGroups = ({ groupFocus, setGroup }) => {
         {allCountries?.slice(0, 4).map((el) => {
           return (
             <Image
-              w="60px"
+              w="45px"
               h="34px"
               m="10px"
               borderRadius={2}
@@ -62,15 +64,16 @@ const AllGroups = ({ groupFocus, setGroup }) => {
         ></Image>
       </Flex>
       <Flex
-        my={'2px'}
+        h="14%"
         py={1}
         justifyContent={'space-evenly'}
         direction={'row'}
         display={groupFocus === 'B' ? 'none' : 'flex'}
         _hover={{
-          backgroundColor: 'rgba(25,10,83,1)',
+          backgroundColor: '#222D80',
           cursor: 'pointer',
-          boxShadow: '1px 1px 5px 1px rgba(0,0,0,0.35)',
+          transitionDuration: '0.5s',
+          transitionTimingFunction: "ease-in-out"
         }}
         onClick={() => {
           setGroup('B');
@@ -82,7 +85,7 @@ const AllGroups = ({ groupFocus, setGroup }) => {
         {allCountries?.slice(4, 8).map((el) => {
           return (
             <Image
-              w="60px"
+              w="45px"
               h="34px"
               m="10px"
               borderRadius={2}
@@ -99,15 +102,16 @@ const AllGroups = ({ groupFocus, setGroup }) => {
         ></Image>
       </Flex>
       <Flex
-        my={'2px'}
+        h="14%"
         py={1}
         justifyContent={'space-evenly'}
         direction={'row'}
         display={groupFocus === 'C' ? 'none' : 'flex'}
         _hover={{
-          backgroundColor: 'rgba(25,10,83,1)',
+          backgroundColor: '#222D80',
           cursor: 'pointer',
-          boxShadow: '1px 1px 5px 1px rgba(0,0,0,0.35)',
+          transitionDuration: '0.5s',
+          transitionTimingFunction: "ease-in-out"
         }}
         onClick={() => {
           setGroup('C');
@@ -119,7 +123,7 @@ const AllGroups = ({ groupFocus, setGroup }) => {
         {allCountries?.slice(8, 12).map((el) => {
           return (
             <Image
-              w="60px"
+              w="45px"
               h="34px"
               m="10px"
               borderRadius={2}
@@ -136,15 +140,16 @@ const AllGroups = ({ groupFocus, setGroup }) => {
         ></Image>
       </Flex>
       <Flex
-        my={'2px'}
+        h="14%"
         py={1}
         justifyContent={'space-evenly'}
         direction={'row'}
         display={groupFocus === 'D' ? 'none' : 'flex'}
         _hover={{
-          backgroundColor: 'rgba(25,10,83,1)',
+          backgroundColor: '#222D80',
           cursor: 'pointer',
-          boxShadow: '1px 1px 5px 1px rgba(0,0,0,0.35)',
+          transitionDuration: '0.5s',
+          transitionTimingFunction: "ease-in-out"
         }}
         onClick={() => {
           setGroup('D');
@@ -156,7 +161,7 @@ const AllGroups = ({ groupFocus, setGroup }) => {
         {allCountries?.slice(12, 16).map((el) => {
           return (
             <Image
-              w="60px"
+              w="45px"
               h="34px"
               m="10px"
               borderRadius={2}
@@ -173,15 +178,16 @@ const AllGroups = ({ groupFocus, setGroup }) => {
         ></Image>
       </Flex>
       <Flex
-        my={'2px'}
+        h="14%"
         py={1}
         justifyContent={'space-evenly'}
         direction={'row'}
         display={groupFocus === 'E' ? 'none' : 'flex'}
         _hover={{
-          backgroundColor: 'rgba(25,10,83,1)',
+          backgroundColor: '#222D80',
           cursor: 'pointer',
-          boxShadow: '1px 1px 5px 1px rgba(0,0,0,0.35)',
+          transitionDuration: '0.5s',
+          transitionTimingFunction: "ease-in-out"
         }}
         onClick={() => {
           setGroup('E');
@@ -193,7 +199,7 @@ const AllGroups = ({ groupFocus, setGroup }) => {
         {allCountries?.slice(16, 20).map((el) => {
           return (
             <Image
-              w="60px"
+              w="45px"
               h="34px"
               m="10px"
               borderRadius={2}
@@ -210,15 +216,16 @@ const AllGroups = ({ groupFocus, setGroup }) => {
         ></Image>
       </Flex>
       <Flex
-        my={'2px'}
+        h="14%"
         py={1}
         justifyContent={'space-evenly'}
         direction={'row'}
         display={groupFocus === 'F' ? 'none' : 'flex'}
         _hover={{
-          backgroundColor: 'rgba(25,10,83,1)',
+          backgroundColor: '#222D80',
           cursor: 'pointer',
-          boxShadow: '1px 1px 5px 1px rgba(0,0,0,0.35)',
+          transitionDuration: '0.5s',
+          transitionTimingFunction: "ease-in-out"
         }}
         onClick={() => {
           setGroup('F');
@@ -230,7 +237,7 @@ const AllGroups = ({ groupFocus, setGroup }) => {
         {allCountries?.slice(20, 24).map((el) => {
           return (
             <Image
-              w="60px"
+              w="45px"
               h="34px"
               m="10px"
               borderRadius={2}
@@ -247,15 +254,16 @@ const AllGroups = ({ groupFocus, setGroup }) => {
         ></Image>
       </Flex>
       <Flex
-        my={'2px'}
+        h="14%"
         py={1}
         justifyContent={'space-evenly'}
         direction={'row'}
         display={groupFocus === 'G' ? 'none' : 'flex'}
         _hover={{
-          backgroundColor: 'rgba(25,10,83,1)',
+          backgroundColor: '#222D80',
           cursor: 'pointer',
-          boxShadow: '1px 1px 5px 1px rgba(0,0,0,0.35)',
+          transitionDuration: '0.5s',
+          transitionTimingFunction: "ease-in-out"
         }}
         onClick={() => {
           setGroup('G');
@@ -267,7 +275,7 @@ const AllGroups = ({ groupFocus, setGroup }) => {
         {allCountries?.slice(24, 28).map((el) => {
           return (
             <Image
-              w="60px"
+              w="45px"
               h="34px"
               m="10px"
               borderRadius={2}
@@ -284,27 +292,28 @@ const AllGroups = ({ groupFocus, setGroup }) => {
         ></Image>
       </Flex>
       <Flex
-        my={'2px'}
+        h="14%"
         py={1}
         justifyContent={'space-evenly'}
         direction={'row'}
         display={groupFocus === 'H' ? 'none' : 'flex'}
         _hover={{
-          backgroundColor: 'rgba(25,10,83,1)',
+          backgroundColor: '#222D80',
           cursor: 'pointer',
-          boxShadow: '1px 1px 5px 1px rgba(0,0,0,0.35)',
+          transitionDuration: '0.5s',
+          transitionTimingFunction: "ease-in-out"
         }}
         onClick={() => {
           setGroup('H');
         }}
       >
-        <Text color={'white'} mt="12px" fontSize="24px">
+        <Text color={'white'} mt="0.4%" fontSize="24px">
           Group H
         </Text>
         {allCountries?.slice(28, 32).map((el) => {
           return (
             <Image
-              w="60px"
+              w="45px"
               h="34px"
               m="10px"
               borderRadius={2}
