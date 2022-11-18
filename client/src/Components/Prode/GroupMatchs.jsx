@@ -22,8 +22,8 @@ const GroupMatchs = ({ group, setMatch }) => {
     return m.id;
   });
   let groupComplete =
-    userProde.hasOwnProperty(matchsIds[0]) &&
-    userProde.hasOwnProperty(matchsIds[1]) &&
+  userProde.hasOwnProperty(matchsIds[0]) &&
+  userProde.hasOwnProperty(matchsIds[1]) &&
     userProde.hasOwnProperty(matchsIds[2]) &&
     userProde.hasOwnProperty(matchsIds[3]) &&
     userProde.hasOwnProperty(matchsIds[4]) &&
@@ -51,7 +51,7 @@ const GroupMatchs = ({ group, setMatch }) => {
             <Heading paddingY={'3%'}>Group {group}</Heading>
             <Image
               h={'5vh'}
-              src={
+              src={ 
                 groupComplete
                   ? 'https://cdn-icons-png.flaticon.com/512/1443/1443000.png'
                   : 'https://i.ibb.co/cFygpXg/matiii.png'
@@ -92,5 +92,6 @@ const GroupMatchs = ({ group, setMatch }) => {
     </Flex>
   );
 };
+
 
 export default GroupMatchs;
