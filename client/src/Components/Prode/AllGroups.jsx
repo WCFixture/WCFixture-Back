@@ -11,8 +11,6 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useState } from 'react';
-import { groupComplete } from './AllGroups';
 const AllGroups = ({ groupFocus, setGroup }) => {
   const allCountries = useSelector((state) => state.allCountries);
   const userProde = useSelector((state) => state.userProde);
@@ -94,9 +92,8 @@ const AllGroups = ({ groupFocus, setGroup }) => {
           borderBottomRightRadius="15px"
         >
           <Flex
-            h="14%"
+            h="10%"
             py={1}
-            display={groupFocus === 'A' ? 'none' : 'flex'}
             flexDirection="column"
             alignItems={"center"}
             _hover={{
@@ -125,14 +122,13 @@ const AllGroups = ({ groupFocus, setGroup }) => {
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px">
+            <Text color={'white'} mt="5px" fontSize="20px" align={"center"}>
               Group A
             </Text>
           </Flex>
           <Flex
-            h="14%"
+            h="10%"
             py={1}
-            display={groupFocus === 'B' ? 'none' : 'flex'}
             flexDirection="column"
             alignItems={"center"}
             _hover={{
@@ -161,14 +157,13 @@ const AllGroups = ({ groupFocus, setGroup }) => {
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px">
+            <Text color={'white'} mt="5px" fontSize="20px"  align={"center"}>
               Group B
             </Text>
           </Flex>
           <Flex
-            h="14%"
+            h="10%"
             py={1}
-            display={groupFocus === 'C' ? 'none' : 'flex'}
             flexDirection="column"
             alignItems={"center"}
             _hover={{
@@ -197,14 +192,13 @@ const AllGroups = ({ groupFocus, setGroup }) => {
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px">
+            <Text color={'white'} mt="5px" fontSize="20px" align={"center"}>
               Group C
             </Text>
           </Flex>
           <Flex
-            h="14%"
+            h="10%"
             py={1}
-            display={groupFocus === 'D' ? 'none' : 'flex'}
             flexDirection="column"
             alignItems={"center"}
             _hover={{
@@ -233,14 +227,13 @@ const AllGroups = ({ groupFocus, setGroup }) => {
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px">
+            <Text color={'white'} mt="5px" fontSize="20px" align={"center"}>
               Group D
             </Text>
           </Flex>
           <Flex
-            h="14%"
+            h="10%"
             py={1}
-            display={groupFocus === 'E' ? 'none' : 'flex'}
             flexDirection="column"
             alignItems={"center"}
             _hover={{
@@ -269,14 +262,13 @@ const AllGroups = ({ groupFocus, setGroup }) => {
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px">
+            <Text color={'white'} mt="5px" fontSize="20px" align={"center"}>
               Group E
             </Text>
           </Flex>
           <Flex
-            h="14%"
+            h="10%"
             py={1}
-            display={groupFocus === 'F' ? 'none' : 'flex'}
             flexDirection="column"
             alignItems={"center"}
             _hover={{
@@ -305,14 +297,13 @@ const AllGroups = ({ groupFocus, setGroup }) => {
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px">
+            <Text color={'white'} mt="5px" fontSize="20px" align={"center"}>
               Group F
             </Text>
           </Flex>
           <Flex
-            h="14%"
+            h="10%"
             py={1}
-            display={groupFocus === 'G' ? 'none' : 'flex'}
             flexDirection="column"
             alignItems={"center"}
             _hover={{
@@ -341,14 +332,13 @@ const AllGroups = ({ groupFocus, setGroup }) => {
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px">
+            <Text color={'white'} mt="5px" fontSize="20px" align={"center"}>
               Group G
             </Text>
           </Flex>
           <Flex
-            h="14%"
+            h="10%"
             py={1}
-            display={groupFocus === 'H' ? 'none' : 'flex'}
             flexDirection="column"
             alignItems={"center"}
             _hover={{
@@ -377,7 +367,7 @@ const AllGroups = ({ groupFocus, setGroup }) => {
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px">
+            <Text color={'white'} mt="5px" fontSize="20px" align={"center"}>
               Group H
             </Text>
           </Flex>

@@ -1,4 +1,4 @@
-import { Flex, VStack, HStack, Image, Text, Button, IconButton, Icon } from '@chakra-ui/react';
+import { Flex, VStack, HStack, Image, Text, Button, IconButton, Icon, useMediaQuery } from '@chakra-ui/react';
 import { TriangleDownIcon, TriangleUpIcon } from '@chakra-ui/icons'
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -12,6 +12,7 @@ const PrincipalMatch = ({ match }) => {
   const allCountries = useSelector((state) => state.allCountries);
   const allGroupsMatchs = useSelector((state) => state.allGroupsMatchs);
   const userProde = useSelector((state) => state.userProde);
+  const [isShorterThan900] = useMediaQuery('(max-width: 900px)');
   const matchFocus = allGroupsMatchs.find((m) => {
     return match === m.id;
   });
