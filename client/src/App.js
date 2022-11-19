@@ -4,21 +4,35 @@ import PickEm from './Components/Prode/PickEm';
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import Sidebar from "./Components/SideBar/Sidebar";
-import { HStack} from '@chakra-ui/react'
+import LeaderBoard from "./Components/LeaderBoard/LeaderBoard";
+import { HStack, VStack } from '@chakra-ui/react'
+import SidebarMobile from "./Components/SideBar/SidebarMobile";
+import { useMediaQuery } from "@chakra-ui/react"
 
 function App() {
+
+  const [isLargerThan900] = useMediaQuery('(min-width: 900px)')
+
+
   return (
 
     <BrowserRouter>
-      <HStack spacing='24px'>
-        <Sidebar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/fixture" element={<Fixture />} />
-          <Route path="/pickem" element={<PickEm />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </HStack>
+
+      {isLargerThan900 ? <HStack spacing='24px'> <Sidebar /> <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/fixture" element={<Fixture />} />
+        <Route path="/pickem" element={<PickEm />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/leaderboard" element={<LeaderBoard />} />
+      </Routes> </HStack> : <VStack spacing='24px'> <SidebarMobile /> <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/fixture" element={<Fixture />} />
+        <Route path="/pickem" element={<PickEm />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/leaderboard" element={<LeaderBoard />} />
+      </Routes> </VStack>}
+
+
     </BrowserRouter>
 
   );

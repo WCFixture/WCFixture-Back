@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_COUNTRIES, GET_MATCHS_FROM_GROUP, GET_MATCHS_FROM_GROUPS, GET_PRODE, UPDATE_PRODE } from '../consts';
+import { GET_COUNTRIES, GET_MATCHS_FROM_GROUP, GET_MATCHS_FROM_GROUPS, GET_PRODE, UPDATE_PRODE, GET_PRODE_POINTS } from '../consts';
 
 
 export function getCountries() {
@@ -32,9 +32,9 @@ export function getMatchsFromGroup(group) {
     }
 }
 
-export function chequearEmail(email) {
+export function chequearEmail(email, picture, name) {
     return async function (dispatch) {
-        let json = await axios.get("/user/chequear_user/" + email)
+        let json = await axios.get("/user/chequear_user/?email=" + email + "&picture=" + picture + "&name=" + name)
         return dispatch({
             type: "CHEQUEAR_USER",
             payload: json.data
@@ -57,6 +57,16 @@ export function getProde(email){
         let json = await axios.get("/user/get_prode/" + email)
         return dispatch({
             type: GET_PRODE,
+            payload: json.data
+        })
+    }
+}
+
+export function getProdePoints(){
+    return async function (dispatch) {
+        let json = await axios.get("/user/prode_points")
+        return dispatch({
+            type: GET_PRODE_POINTS,
             payload: json.data
         })
     }

@@ -6,6 +6,6 @@ import { Button } from '@chakra-ui/react';
 export default function LogoutButton() {
   const { logout } = useAuth0();
   return (
-    <Button mt={4} colorScheme='blue' variant='ghost' onClick={() => logout({returnTo: window.location.origin})}>Logout</Button>
+    <Button colorScheme='blue' variant='ghost' onClick={() => logout({returnTo: window.location.origin})}>Logout</Button>
   )
 }

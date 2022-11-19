@@ -12,6 +12,14 @@ const dataSchema = new mongoose.Schema({
   prodeComplete: {
     type: Boolean,
     required: true
+  },
+  picture: {
+    type: String,
+    required: false
+  },
+  name: {
+    type: String,
+    required: false
   }
 });
 
