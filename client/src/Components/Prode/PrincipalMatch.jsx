@@ -100,22 +100,25 @@ const PrincipalMatch = ({ match }) => {
           <Image
             m="30px"
             borderRadius={'5px'}
-            w={'240px'}
+            w={'18%'}
             h="150px"
             src={countryOne.flag}
           ></Image>
-          <Text m="10px" color={'white'} fontSize={30}>
+          <Flex w="15%" justifyContent={"center"} alignItems="center">
+          <Text  color={'white'}  fontSize={"1.5vw"}>
             {countryOne.name}
           </Text>
-          <Flex direction={'column'} ml="10px">
-            <Button mb={2}  onClick={upButtonLocal}  backgroundColor="transparent">
+          </Flex>
+         
+          <Flex direction={'column'} justifyContent="center" alignItems={"center"} >
+            <Button mb={2}  onClick={upButtonLocal} w="4%"  backgroundColor="transparent">
               <Icon
                 color={"white"}
                 boxSize="30px"
                 as={TriangleUpIcon}
               ></Icon>
             </Button>
-            <Button onClick={downButtonLocal}  backgroundColor="transparent">
+            <Button w="4%"  onClick={downButtonLocal}  backgroundColor="transparent">
               <Icon
                 color={"white"}
                 boxSize="30px"
@@ -128,7 +131,7 @@ const PrincipalMatch = ({ match }) => {
             alignItems="center"
             direction={'column'}
           >
-            <Text fontSize={'70px'} color="white">
+            <Text fontSize={'4vw'} color="white">
               {result.local} - {result.away}
             </Text>
             {isAuthenticated ? (
@@ -144,15 +147,15 @@ const PrincipalMatch = ({ match }) => {
             ) : null}
           </Flex>
 
-          <Flex direction={'column'} mr="10px">
-          <Button mb={2} onClick={upButtonAway}  backgroundColor="transparent">
+          <Flex direction={'column'} justifyContent="center" alignItems={"center"} >
+          <Button mb={2} w="4%"  onClick={upButtonAway}  backgroundColor="transparent">
               <Icon
                 color={"white"}
                 boxSize="30px"
                 as={TriangleUpIcon}
               ></Icon>
             </Button>
-            <Button onClick={downButtonAway}  backgroundColor="transparent">
+            <Button w="4%"  onClick={downButtonAway}  backgroundColor="transparent">
               <Icon
                 color={"white"}
                 boxSize="30px"
@@ -160,13 +163,16 @@ const PrincipalMatch = ({ match }) => {
               ></Icon>
             </Button>
           </Flex>
-          <Text m="10px" color={'white'} fontSize={30}>
+          <Flex w="15%" justifyContent={"center"} alignItems="center">  
+          <Text color={'white'}  fontSize={"1.5vw"}>
             {countryTwo.name}
           </Text>
+          </Flex>
+          
           <Image
             m="30px"
             borderRadius={'5px'}
-            w={'240px'}
+            w={'18%'}
             h="150px"
             src={countryTwo.flag}
           ></Image>

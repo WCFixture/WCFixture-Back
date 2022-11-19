@@ -38,4 +38,19 @@ matchsRoutes.get('/get_all_from_groups', async (req, res) => {
     }
 });
 
+matchsRoutes.post('/update_result', async (req, res) => {
+    const { matchId, result } = req.body;
+    try {
+        let json = await Match.findOne({ id: matchId });
+        json.result = result;
+        json.status = "finished"
+        json.markModified('result');
+        await json.save();
+        res.redirect(307, "/user/update_points/" + matchId)
+    } catch (error) {
+        return res.status(400).json({ "Error": error.message });
+    }
+});
+
+
 module.exports = matchsRoutes;

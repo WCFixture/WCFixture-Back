@@ -7,7 +7,7 @@ export default function LoginButton({ type }) {
 
   return type === 'Login' ? (
     <Button
-      mb="2vh"
+      
       w="75%"
       colorScheme="blue"
       onClick={() => loginWithRedirect()}
@@ -16,7 +16,7 @@ export default function LoginButton({ type }) {
     </Button>
   ) : (
     <Button
-      mb="2vh"
+     
       w="75%"
       colorScheme="blue"
       onClick={() => loginWithRedirect({ screen_hint: 'signup' })}
