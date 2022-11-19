@@ -89,7 +89,6 @@ const AllGroups = ({ groupFocus, setGroup }) => {
       bgGradient="radial(rgba(22,8,45,0.8410714627647934) 0%, rgba(25,10,83,0.8410714627647934) 100%)"
       direction={'column'}
       justifyContent={'space-evenly'}
-      justify
       overflow="hidden"
     >
       <Flex

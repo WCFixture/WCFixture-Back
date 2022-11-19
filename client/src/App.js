@@ -17,7 +17,6 @@ function App() {
   return (
 
     <BrowserRouter>
-
       {isLargerThan900 ? <HStack spacing='24px'> <Sidebar /> <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/fixture" element={<Fixture />} />
@@ -31,8 +30,6 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/leaderboard" element={<LeaderBoard />} />
       </Routes> </VStack>}
-
-
     </BrowserRouter>
 
   );
