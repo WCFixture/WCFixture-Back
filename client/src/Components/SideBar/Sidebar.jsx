@@ -131,9 +131,14 @@ export default function Sidebar() {
           </Center>
         </Flex>
       ) : (
-        <Center flexDirection="column">
+        <Center display={navSize === 'small' ? 'none' : 'flex'} flexDirection="column">
+          <Flex w="100%" justifyContent={"center"}>
           <LoginButton type="Login" />
-          <LoginButton type="Register" />
+          </Flex>
+         <Flex w="100%" mt="10px" justifyContent={"center"}>
+         <LoginButton type="Register" />
+         </Flex>
+     
         </Center>
       )}
     </Flex>
