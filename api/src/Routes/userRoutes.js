@@ -24,6 +24,9 @@ userRoutes.post('/update_prode/:email', async (req, res) => {
         const { matchId, result } = req.body;
         let json = await User.findOne({ email: email })
         json.prode[matchId] = result
+        if (Object.keys(json.prode).length === 49) {
+            json.prodeComplete = true
+        }
         json.markModified('prode')
         await json.save()
         res.status(200).json(json.prode);
