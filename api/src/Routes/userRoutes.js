@@ -70,15 +70,24 @@ userRoutes.post('/update_points/:matchId', async (req, res) => {
 });
 
 
-userRoutes.get('/chequear_user/:email', async (req, res) => {
+userRoutes.get('/chequear_user/', async (req, res) => {
     try {
-        const { email } = req.params;
+        const { email, picture, name } = req.query;
         let json = await User.findOne({ email: email })
         if (!json) {
-            await User.create({ email, prodeComplete: false, prode: { points: 0 } })
-        }
+            await User.create({ email, prodeComplete: false, prode: {points: 0}, picture, name })
         res.status(200).json(json);
-    } catch (error) {
+    } } catch (error) {
+        return res.status(400).json({ "Error": error.message});
+    }
+});
+
+userRoutes.get("/prode_points", async (req, res) => {
+    try{
+        let json = await User.find({prodeComplete: true}).select({"name": 1, "_id": 0, "picture": 1, "prode.points": 1 })
+        json = json.filter(value => JSON.stringify(value) !== '{}');
+        res.status(200).json(json);
+    } catch (error){
         return res.status(400).json({ "Error": error.message });
     }
 });
