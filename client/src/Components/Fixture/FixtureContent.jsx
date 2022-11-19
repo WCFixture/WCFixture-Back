@@ -14,21 +14,22 @@ import {
 
 export default function Fixturecontent() {
   return (
-    <Container maxW="80%">
+    <Container maxW="100%">
+
       <Heading
         lineHeight={1.1}
         fontWeight={600}
         fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
 
         <Text
-          ml="22%"
+          ml="12%"
           as={'span'}
           color="#DBDFF5"
           position={'relative'}
           _after={{
             content: "''",
             width: 'full',
-            height: '30%',
+            height: '20%',
             position: 'absolute',
             bottom: 1,
             left: 0,
@@ -59,7 +60,7 @@ export default function Fixturecontent() {
           overflow="hidden"
         >
           <Text
-                      minW="20%"
+            minW="20%"
             align="center"
             mt="4%"
             fontSize="2xl"
@@ -83,7 +84,7 @@ export default function Fixturecontent() {
             src="https://flagcdn.com/w320/ec.png"
           ></Image>
           <Text
-                      minW="20%"
+            minW="20%"
             align="center"
             mt="4%"
             fontSize="2xl"

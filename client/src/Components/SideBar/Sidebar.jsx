@@ -20,7 +20,6 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { chequearEmail, getCountries, getMatchsFromGroups, getProde, getProdePoints } from '../../Redux/actions';
 import LogoutButton from '../Auth/Logout';
-import   "./navbar.css"
 
 export default function Sidebar() {
   const [navSize, changeNavSize] = useState('large');
