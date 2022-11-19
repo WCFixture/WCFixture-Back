@@ -66,6 +66,7 @@ export default function SidebarMobile() {
         <IconButton
           background="none"
           color="#b2b7d7"
+          ml="10px"
           _hover={{ background: '#6a73ab' }}
           icon={<FiMenu />}
           onClick={() => {
@@ -116,10 +117,10 @@ export default function SidebarMobile() {
           
         </Flex>
       ) : (
-        <Center flexDirection="row">
+        <Flex >
           <LoginButton type="Login" />
-          <LoginButton type="Register" />
-        </Center>
+          
+        </Flex>
       )}
       </Flex>
 
