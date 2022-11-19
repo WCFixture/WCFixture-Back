@@ -102,7 +102,7 @@ const PrincipalMatch = ({ match }) => {
             m="30px"
             borderRadius={'5px'}
             w={'18%'}
-            h="150px"
+            h="10vw"
             src={countryOne.flag}
           ></Image>
           <Flex w="15%" justifyContent={"center"} alignItems="center">
@@ -174,7 +174,7 @@ const PrincipalMatch = ({ match }) => {
             m="30px"
             borderRadius={'5px'}
             w={'18%'}
-            h="150px"
+            h="10vw"
             src={countryTwo.flag}
           ></Image>
         </>

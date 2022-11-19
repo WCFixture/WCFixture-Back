@@ -90,12 +90,14 @@ const AllGroups = ({ groupFocus, setGroup }) => {
           bgGradient="radial(rgba(22,8,45,0.8410714627647934) 0%, rgba(25,10,83,0.8410714627647934) 100%)"
           borderTopRightRadius="15px"
           borderBottomRightRadius="15px"
+          overflow={"hidden"}
         >
           <Flex
             h="10%"
             py={1}
             flexDirection="column"
-            alignItems={"center"}
+            alignItems={'center'}
+            backgroundColor={groupFocus === 'A' ? '#222D80' : 'transparent'}
             _hover={{
               backgroundColor: '#222D80',
               cursor: 'pointer',
@@ -122,15 +124,16 @@ const AllGroups = ({ groupFocus, setGroup }) => {
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px" align={"center"}>
-              Group A
+            <Text color={'white'} mt="5px" fontSize="20px" align={'center'}>
+              A
             </Text>
           </Flex>
           <Flex
             h="10%"
             py={1}
             flexDirection="column"
-            alignItems={"center"}
+            backgroundColor={groupFocus === 'B' ? '#222D80' : 'transparent'}
+            alignItems={'center'}
             _hover={{
               backgroundColor: '#222D80',
               cursor: 'pointer',
@@ -157,15 +160,16 @@ const AllGroups = ({ groupFocus, setGroup }) => {
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px"  align={"center"}>
-              Group B
+            <Text color={'white'} mt="5px" fontSize="20px" align={'center'}>
+              B
             </Text>
           </Flex>
           <Flex
             h="10%"
             py={1}
             flexDirection="column"
-            alignItems={"center"}
+            backgroundColor={groupFocus === 'C' ? '#222D80' : 'transparent'}
+            alignItems={'center'}
             _hover={{
               backgroundColor: '#222D80',
               cursor: 'pointer',
@@ -192,15 +196,16 @@ const AllGroups = ({ groupFocus, setGroup }) => {
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px" align={"center"}>
-              Group C
+            <Text color={'white'} mt="5px" fontSize="20px" align={'center'}>
+              C
             </Text>
           </Flex>
           <Flex
             h="10%"
             py={1}
             flexDirection="column"
-            alignItems={"center"}
+            backgroundColor={groupFocus === 'D' ? '#222D80' : 'transparent'}
+            alignItems={'center'}
             _hover={{
               backgroundColor: '#222D80',
               cursor: 'pointer',
@@ -227,15 +232,16 @@ const AllGroups = ({ groupFocus, setGroup }) => {
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px" align={"center"}>
-              Group D
+            <Text color={'white'} mt="5px" fontSize="20px" align={'center'}>
+            D
             </Text>
           </Flex>
           <Flex
             h="10%"
             py={1}
             flexDirection="column"
-            alignItems={"center"}
+            backgroundColor={groupFocus === 'E' ? '#222D80' : 'transparent'}
+            alignItems={'center'}
             _hover={{
               backgroundColor: '#222D80',
               cursor: 'pointer',
@@ -262,15 +268,16 @@ const AllGroups = ({ groupFocus, setGroup }) => {
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px" align={"center"}>
-              Group E
+            <Text color={'white'} mt="5px" fontSize="20px" align={'center'}>
+              E
             </Text>
           </Flex>
           <Flex
             h="10%"
             py={1}
             flexDirection="column"
-            alignItems={"center"}
+            backgroundColor={groupFocus === 'F' ? '#222D80' : 'transparent'}
+            alignItems={'center'}
             _hover={{
               backgroundColor: '#222D80',
               cursor: 'pointer',
@@ -297,15 +304,16 @@ const AllGroups = ({ groupFocus, setGroup }) => {
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px" align={"center"}>
-              Group F
+            <Text color={'white'} mt="5px" fontSize="20px" align={'center'}>
+              F
             </Text>
           </Flex>
           <Flex
             h="10%"
             py={1}
             flexDirection="column"
-            alignItems={"center"}
+            backgroundColor={groupFocus === 'G' ? '#222D80' : 'transparent'}
+            alignItems={'center'}
             _hover={{
               backgroundColor: '#222D80',
               cursor: 'pointer',
@@ -332,15 +340,16 @@ const AllGroups = ({ groupFocus, setGroup }) => {
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px" align={"center"}>
-              Group G
+            <Text color={'white'} mt="5px" fontSize="20px" align={'center'}>
+              G
             </Text>
           </Flex>
           <Flex
             h="10%"
             py={1}
             flexDirection="column"
-            alignItems={"center"}
+            backgroundColor={groupFocus === 'H' ? '#222D80' : 'transparent'}
+            alignItems={'center'}
             _hover={{
               backgroundColor: '#222D80',
               cursor: 'pointer',
@@ -367,11 +376,10 @@ const AllGroups = ({ groupFocus, setGroup }) => {
                 src="https://i.ibb.co/cFygpXg/matiii.png"
               ></Image>
             )}
-            <Text color={'white'} mt="5px" fontSize="20px" align={"center"}>
-              Group H
+            <Text color={'white'} mt="5px" fontSize="20px" align={'center'}>
+              H
             </Text>
           </Flex>
-          
         </Flex>
       ) : (
         <Flex
@@ -389,8 +397,9 @@ const AllGroups = ({ groupFocus, setGroup }) => {
             h="14%"
             py={1}
             justifyContent={'space-evenly'}
+            alignItems="center"
             direction={'row'}
-            display={groupFocus === 'A' ? 'none' : 'flex'}
+            backgroundColor={groupFocus === 'A' ? '#222D80' : 'transparent'}
             _hover={{
               backgroundColor: '#222D80',
               cursor: 'pointer',
@@ -401,30 +410,24 @@ const AllGroups = ({ groupFocus, setGroup }) => {
               setGroup('A');
             }}
           >
-            <Text color={'white'} mt="12px" fontSize="24px">
+            <Text color={'white'} fontSize="2.7vh">
               Group A
             </Text>
             {allCountries?.slice(0, 4).map((el) => {
               return (
-                <Image
-                  w="45px"
-                  h="34px"
-                  m="10px"
-                  borderRadius={2}
-                  src={el.flag}
-                ></Image>
+                <Image w="2.6vw" h="1.8vw" borderRadius={2} src={el.flag}></Image>
               );
             })}
             {groupAComplete ? (
               <Image
-                mt="10px"
+                
                 w="34px"
                 h="34px"
                 src="https://cdn-icons-png.flaticon.com/512/1443/1443000.png"
               ></Image>
             ) : (
               <Image
-                mt="10px"
+                
                 mx="-5.5px"
                 w="45px"
                 h="34px"
@@ -433,11 +436,12 @@ const AllGroups = ({ groupFocus, setGroup }) => {
             )}
           </Flex>
           <Flex
+            alignItems="center"
             h="14%"
             py={1}
             justifyContent={'space-evenly'}
             direction={'row'}
-            display={groupFocus === 'B' ? 'none' : 'flex'}
+            backgroundColor={groupFocus === 'B' ? '#222D80' : 'transparent'}
             _hover={{
               backgroundColor: '#222D80',
               cursor: 'pointer',
@@ -448,30 +452,24 @@ const AllGroups = ({ groupFocus, setGroup }) => {
               setGroup('B');
             }}
           >
-            <Text color={'white'} mt="12px" fontSize="24px">
+            <Text color={'white'} fontSize="24px">
               Group B
             </Text>
             {allCountries?.slice(4, 8).map((el) => {
               return (
-                <Image
-                  w="45px"
-                  h="34px"
-                  m="10px"
-                  borderRadius={2}
-                  src={el.flag}
-                ></Image>
+                <Image w="2.6vw" h="1.8vw" borderRadius={2} src={el.flag}></Image>
               );
             })}
             {groupBComplete ? (
               <Image
-                mt="10px"
+                
                 w="34px"
                 h="34px"
                 src="https://cdn-icons-png.flaticon.com/512/1443/1443000.png"
               ></Image>
             ) : (
               <Image
-                mt="10px"
+                
                 mx="-5.5px"
                 w="45px"
                 h="34px"
@@ -480,11 +478,12 @@ const AllGroups = ({ groupFocus, setGroup }) => {
             )}
           </Flex>
           <Flex
+            alignItems="center"
             h="14%"
             py={1}
             justifyContent={'space-evenly'}
             direction={'row'}
-            display={groupFocus === 'C' ? 'none' : 'flex'}
+            backgroundColor={groupFocus === 'C' ? '#222D80' : 'transparent'}
             _hover={{
               backgroundColor: '#222D80',
               cursor: 'pointer',
@@ -495,30 +494,24 @@ const AllGroups = ({ groupFocus, setGroup }) => {
               setGroup('C');
             }}
           >
-            <Text color={'white'} mt="12px" fontSize="24px">
+            <Text color={'white'} fontSize="24px">
               Group C
             </Text>
             {allCountries?.slice(8, 12).map((el) => {
               return (
-                <Image
-                  w="45px"
-                  h="34px"
-                  m="10px"
-                  borderRadius={2}
-                  src={el.flag}
-                ></Image>
+                <Image w="2.6vw" h="1.8vw" borderRadius={2} src={el.flag}></Image>
               );
             })}
             {groupCComplete ? (
               <Image
-                mt="10px"
+                
                 w="34px"
                 h="34px"
                 src="https://cdn-icons-png.flaticon.com/512/1443/1443000.png"
               ></Image>
             ) : (
               <Image
-                mt="10px"
+                
                 mx="-5.5px"
                 w="45px"
                 h="34px"
@@ -527,11 +520,12 @@ const AllGroups = ({ groupFocus, setGroup }) => {
             )}
           </Flex>
           <Flex
+            alignItems="center"
             h="14%"
             py={1}
             justifyContent={'space-evenly'}
             direction={'row'}
-            display={groupFocus === 'D' ? 'none' : 'flex'}
+            backgroundColor={groupFocus === 'D' ? '#222D80' : 'transparent'}
             _hover={{
               backgroundColor: '#222D80',
               cursor: 'pointer',
@@ -542,30 +536,24 @@ const AllGroups = ({ groupFocus, setGroup }) => {
               setGroup('D');
             }}
           >
-            <Text color={'white'} mt="12px" fontSize="24px">
+            <Text color={'white'} fontSize="24px">
               Group D
             </Text>
             {allCountries?.slice(12, 16).map((el) => {
               return (
-                <Image
-                  w="45px"
-                  h="34px"
-                  m="10px"
-                  borderRadius={2}
-                  src={el.flag}
-                ></Image>
+                <Image w="2.6vw" h="1.8vw" borderRadius={2} src={el.flag}></Image>
               );
             })}
             {groupDComplete ? (
               <Image
-                mt="10px"
+                
                 w="34px"
                 h="34px"
                 src="https://cdn-icons-png.flaticon.com/512/1443/1443000.png"
               ></Image>
             ) : (
               <Image
-                mt="10px"
+                
                 mx="-5.5px"
                 w="45px"
                 h="34px"
@@ -574,11 +562,12 @@ const AllGroups = ({ groupFocus, setGroup }) => {
             )}
           </Flex>
           <Flex
+            alignItems="center"
             h="14%"
             py={1}
             justifyContent={'space-evenly'}
             direction={'row'}
-            display={groupFocus === 'E' ? 'none' : 'flex'}
+            backgroundColor={groupFocus === 'E' ? '#222D80' : 'transparent'}
             _hover={{
               backgroundColor: '#222D80',
               cursor: 'pointer',
@@ -589,30 +578,24 @@ const AllGroups = ({ groupFocus, setGroup }) => {
               setGroup('E');
             }}
           >
-            <Text color={'white'} mt="12px" fontSize="24px">
+            <Text color={'white'} fontSize="24px">
               Group E
             </Text>
             {allCountries?.slice(16, 20).map((el) => {
               return (
-                <Image
-                  w="45px"
-                  h="34px"
-                  m="10px"
-                  borderRadius={2}
-                  src={el.flag}
-                ></Image>
+                <Image w="2.6vw" h="1.8vw" borderRadius={2} src={el.flag}></Image>
               );
             })}
             {groupEComplete ? (
               <Image
-                mt="10px"
+                
                 w="34px"
                 h="34px"
                 src="https://cdn-icons-png.flaticon.com/512/1443/1443000.png"
               ></Image>
             ) : (
               <Image
-                mt="10px"
+                
                 mx="-5.5px"
                 w="45px"
                 h="34px"
@@ -621,11 +604,12 @@ const AllGroups = ({ groupFocus, setGroup }) => {
             )}
           </Flex>
           <Flex
+            alignItems="center"
             h="14%"
             py={1}
             justifyContent={'space-evenly'}
             direction={'row'}
-            display={groupFocus === 'F' ? 'none' : 'flex'}
+            backgroundColor={groupFocus === 'F' ? '#222D80' : 'transparent'}
             _hover={{
               backgroundColor: '#222D80',
               cursor: 'pointer',
@@ -636,30 +620,24 @@ const AllGroups = ({ groupFocus, setGroup }) => {
               setGroup('F');
             }}
           >
-            <Text color={'white'} mt="12px" fontSize="24px">
+            <Text color={'white'} fontSize="24px">
               Group F
             </Text>
             {allCountries?.slice(20, 24).map((el) => {
               return (
-                <Image
-                  w="45px"
-                  h="34px"
-                  m="10px"
-                  borderRadius={2}
-                  src={el.flag}
-                ></Image>
+                <Image w="2.6vw" h="1.8vw" borderRadius={2} src={el.flag}></Image>
               );
             })}
             {groupFComplete ? (
               <Image
-                mt="10px"
+                
                 w="34px"
                 h="34px"
                 src="https://cdn-icons-png.flaticon.com/512/1443/1443000.png"
               ></Image>
             ) : (
               <Image
-                mt="10px"
+                
                 mx="-5.5px"
                 w="45px"
                 h="34px"
@@ -668,11 +646,12 @@ const AllGroups = ({ groupFocus, setGroup }) => {
             )}
           </Flex>
           <Flex
+            alignItems="center"
             h="14%"
             py={1}
             justifyContent={'space-evenly'}
             direction={'row'}
-            display={groupFocus === 'G' ? 'none' : 'flex'}
+            backgroundColor={groupFocus === 'G' ? '#222D80' : 'transparent'}
             _hover={{
               backgroundColor: '#222D80',
               cursor: 'pointer',
@@ -683,30 +662,24 @@ const AllGroups = ({ groupFocus, setGroup }) => {
               setGroup('G');
             }}
           >
-            <Text color={'white'} mt="12px" fontSize="24px">
+            <Text color={'white'} fontSize="24px">
               Group G
             </Text>
             {allCountries?.slice(24, 28).map((el) => {
               return (
-                <Image
-                  w="45px"
-                  h="34px"
-                  m="10px"
-                  borderRadius={2}
-                  src={el.flag}
-                ></Image>
+                <Image w="2.6vw" h="1.8vw" borderRadius={2} src={el.flag}></Image>
               );
             })}
             {groupGComplete ? (
               <Image
-                mt="10px"
+               
                 w="34px"
                 h="34px"
                 src="https://cdn-icons-png.flaticon.com/512/1443/1443000.png"
               ></Image>
             ) : (
               <Image
-                mt="10px"
+                
                 mx="-5.5px"
                 w="45px"
                 h="34px"
@@ -715,11 +688,12 @@ const AllGroups = ({ groupFocus, setGroup }) => {
             )}
           </Flex>
           <Flex
+            alignItems="center"
             h="14%"
             py={1}
             justifyContent={'space-evenly'}
             direction={'row'}
-            display={groupFocus === 'H' ? 'none' : 'flex'}
+            backgroundColor={groupFocus === 'H' ? '#222D80' : 'transparent'}
             _hover={{
               backgroundColor: '#222D80',
               cursor: 'pointer',
@@ -730,30 +704,24 @@ const AllGroups = ({ groupFocus, setGroup }) => {
               setGroup('H');
             }}
           >
-            <Text color={'white'} mt="0.4%" fontSize="24px">
+            <Text color={'white'} fontSize="24px">
               Group H
             </Text>
             {allCountries?.slice(28, 32).map((el) => {
               return (
-                <Image
-                  w="45px"
-                  h="34px"
-                  m="10px"
-                  borderRadius={2}
-                  src={el.flag}
-                ></Image>
+                <Image w="2.6vw" h="1.8vw" borderRadius={2} src={el.flag}></Image>
               );
             })}
             {groupHComplete ? (
               <Image
-                mt="10px"
+                
                 w="34px"
                 h="34px"
                 src="https://cdn-icons-png.flaticon.com/512/1443/1443000.png"
               ></Image>
             ) : (
               <Image
-                mt="10px"
+               
                 mx="-5.5px"
                 w="45px"
                 h="34px"
