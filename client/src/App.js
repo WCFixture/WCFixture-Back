@@ -10,7 +10,7 @@ function App() {
   return (
 
     <BrowserRouter>
-      <HStack spacing='24px'>
+      <HStack spacing='24px' align="flex-start">
         <Sidebar />
         <Routes>
           <Route path="/" element={<Home />} />
