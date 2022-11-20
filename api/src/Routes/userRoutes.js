@@ -24,7 +24,7 @@ userRoutes.post('/update_prode/:email', async (req, res) => {
         const { matchId, result } = req.body;
         let json = await User.findOne({ email: email })
         json.prode[matchId] = result
-        if (Object.keys(json.prode).length === 49) {
+        if (Object.keys(json.prode).length === 48) {
             json.prodeComplete = true
         }
         json.markModified('prode')
