@@ -46,13 +46,13 @@ userRoutes.post('/update_points/:matchId', async (req, res) => {
         for (let i = 0; i < users.length; i++) {
             let predict = users[i].prode[String(matchId)]
             if (predict.local === match.result.local && predict.away === match.result.away) {
-                if (predict.local > 3 || predict.away > 3) {
+                if (predict.local + predict.away > 4) {
                     users[i].prode.points += 25
                     users[i].markModified('prode.points');
                     await users[i].save()
                     continue
                 }
-                users[i].prode.points += 20
+                users[i].prode.points += 15
                 users[i].markModified('prode.points');
                 await users[i].save()
                 continue
