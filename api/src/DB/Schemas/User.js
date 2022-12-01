@@ -20,7 +20,11 @@ const dataSchema = new mongoose.Schema({
   name: {
     type: String,
     required: false
-  }
+  },
+  prodeStarted: {
+    type: Boolean,
+    required: true
+  },
 });
 
 module.exports = mongoose.model('User', dataSchema);

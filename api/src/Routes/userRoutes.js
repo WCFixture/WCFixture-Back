@@ -34,6 +34,19 @@ userRoutes.post('/update_prode/:email', async (req, res) => {
         return res.status(400).json({ "Error": error.message });
     }
 });
+userRoutes.post('/update_users', async (req, res) => {
+    try {
+        let users = await User.find({ })
+        for (let i = 0; i < users.length; i++) {
+            users[i].prodeStarted = false
+            users[i].markModified('prodeStarted');
+            await users[i].save()
+        }
+        res.status(200).json(users);
+    } catch (error) {
+        return res.status(400).json({ "Error": error.message });
+    }
+});
 
 userRoutes.post('/update_points/:matchId', async (req, res) => {
     const { matchId } = req.params;
