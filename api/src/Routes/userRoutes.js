@@ -27,22 +27,12 @@ userRoutes.post('/update_prode/:email', async (req, res) => {
         if (Object.keys(json.prode).length === 48) {
             json.prodeComplete = true
         }
+        if(!json.prodeStarted){
+            json.prodeStarted = true
+        }
         json.markModified('prode')
         await json.save()
         res.status(200).json(json.prode);
-    } catch (error) {
-        return res.status(400).json({ "Error": error.message });
-    }
-});
-userRoutes.post('/update_users', async (req, res) => {
-    try {
-        let users = await User.find({ })
-        for (let i = 0; i < users.length; i++) {
-            users[i].prodeStarted = false
-            users[i].markModified('prodeStarted');
-            await users[i].save()
-        }
-        res.status(200).json(users);
     } catch (error) {
         return res.status(400).json({ "Error": error.message });
     }
@@ -88,7 +78,7 @@ userRoutes.get('/chequear_user/', async (req, res) => {
         const { email, picture, name } = req.query;
         let json = await User.findOne({ email: email })
         if (!json) {
-            await User.create({ email, prodeComplete: false, prode: {points: 0}, picture, name })
+            await User.create({ email, prodeComplete: false, prodeStarted: false, prode: {points: 0}, picture, name })
         res.status(200).json(json);
     } } catch (error) {
         return res.status(400).json({ "Error": error.message});
