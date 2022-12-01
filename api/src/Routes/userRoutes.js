@@ -12,7 +12,7 @@ userRoutes.get('/get_prode/:email', async (req, res) => {
     try {
         const { email } = req.params;
         let json = await User.findOne({ email: email })
-        res.status(200).json(json.prode);
+        res.status(200).json({...json.prode, prodeStarted: json.prodeStarted});
     } catch (error) {
         return res.status(400).json({ "Error": error.message });
     }
