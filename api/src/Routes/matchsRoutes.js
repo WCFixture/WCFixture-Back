@@ -37,6 +37,14 @@ matchsRoutes.get('/get_all_from_groups', async (req, res) => {
         return res.status(400).json({ "Error": error.message });
     }
 });
+matchsRoutes.get('/get_all_from_playoff', async (req, res) => {
+    try {
+        let json = await Match.find({ instance: "playoff" });
+        res.status(200).json(json);
+    } catch (error) {
+        return res.status(400).json({ "Error": error.message });
+    }
+});
 
 matchsRoutes.post('/update_result', async (req, res) => {
     const { matchId, result } = req.body;
