@@ -29,6 +29,7 @@ userRoutes.post('/update_prode/:email', async (req, res) => {
         }
         if(!json.prodeStarted){
             json.prodeStarted = true
+            await json.save();
         }
         json.markModified('prode')
         await json.save()
